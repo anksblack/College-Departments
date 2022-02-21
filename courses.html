@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Course</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+ <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+.btn {
+  background-color: #B82471;
+  border: none;
+  color: black;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 13px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #38b598;
+  color: white;
+}
+
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+
+@media (min-width: 576px) {
+  .column {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .column {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .column {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+.title {
+  margin-bottom: 25px;
+	text-align: center;
+}
+
+.title h1 {
+  font-size: 25px;
+	color: #000000;
+}
+
+.credit {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.credit a {
+	font-weight: 900;
+	color: #000000;
+	text-decoration: underline;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/********** Effect #1 CSS *********/
+.effect-1 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.effect-1 .effect-img {
+  font-size: 0;
+}
+
+.effect-1 .effect-img img {
+  width: 100%;
+  height: auto;
+}
+
+.effect-1 .effect-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  top: calc(100% - 60px);
+  left: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+
+.effect-1:hover .effect-text {
+  top: 0;
+}
+
+.effect-1 .effect-text h2 {
+  height: 45px;
+  color: #ffffff;
+  font-size: 25px;
+  margin: -15px 0 0 0;
+  transition: .5s;
+}
+
+.effect-1:hover .effect-text h2 {
+  margin: 0;
+}
+
+.effect-1 .effect-text p {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.effect-1 .effect-btn .btn {
+  display: inline-block;
+  height: 35px;
+  padding: 7px 15px;
+  color: #333333;
+  background: #ffffff;
+  text-decoration: none;
+}
+
+/********** Effect #2 CSS *********/
+.effect-2 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.effect-2 .effect-img {
+  position: relative;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.effect-2 .effect-img img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transform: scale(1.2);
+  bottom: -25px;
+  transition: .5s;
+}
+
+.effect-2:hover .effect-img img {
+  bottom: 0;
+}
+
+.effect-2 .effect-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  background: rgba(0, 0, 0, .2);
+  opacity: 0;
+  transition: .5s;
+}
+
+.effect-2:hover .effect-text {
+  top: 0;
+  opacity: 1;
+}
+
+.effect-2 .effect-text p {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.effect-2 .effect-btn {
+  position: absolute;
+  width: 100%;
+  padding: 15px 7.5px;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .5);
+}
+
+.effect-2 .effect-text h2 {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 14.5px;
+  font-weight: 400;
+  float: left;
+  margin: 5px 7.5px 0 7.5px;
+}
+
+.effect-2 .effect-btn .btn {
+  position: relative;
+  display: inline-block;
+  float: right;
+  height: 35px;
+  padding: 7px 15px;
+  margin: 0 7.5px;
+  color: #333333;
+  background: #ffffff;
+  text-decoration: none;
+}
+
+/********** Effect #3 CSS *********/
+.effect-3 {
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.effect-3 .effect-img {
+  font-size: 0;
+  overflow: hidden;
+}
+
+.effect-3 .effect-img img {
+  width: 100%;
+  height: auto;
+  transition: .3s;
+}
+
+.effect-3:hover .effect-img img {
+  transform: scale(1.2);
+}
+
+.effect-3 .effect-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  text-align: center;
+  background: rgba(0, 0, 0, .5);
+  transition: .5s;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.effect-3:hover .effect-text {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.effect-3 .effect-text h2 {
+  height: 45px;
+  color: #ffffff;
+  font-size: 25px;
+  margin: 0;
+}
+
+.effect-3 .effect-text p {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.effect-3 .effect-btn .btn {
+  display: inline-block;
+  height: 35px;
+  padding: 7px 15px;
+  color: #333333;
+  background: #ffffff;
+  text-decoration: none;
+}
+
+.bottom-left {
+  position: absolute;
+  top:45%;
+  left: 56px;
+}
+.all-page-title1{
+	background-size: cover;
+	background-color: #0594a9;
+	background-repeat: no-repeat;
+	padding: 160px 0px 110px 0px;
+	background-position: left;
+}
+.page-info1{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.inner-container1 ul li a{
+	background: #333333;
+	display: flex;
+	color: #ffffff;
+	padding: 5px 10px;	
+}
+
+p{
+color:black;
+text-align:left;
+}
+a{
+color:white;
+align:left;
+}
+h2{
+color:black;
+text-align:left;
+}
+.btn1 {
+  background-color: #B82471;
+  border: none;
+  color: white;
+   float: left;
+  padding: 10px 30px;
+  text-align:center;
+  font-size: 13px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+.btn3 {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 20px 30px;
+}
+.btn1:hover {
+  background-color: #38b598;
+  color: white;
+}
+</style>
+
+</head>
+<body class="seo_version">
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img style="height:70px;width:250px;" src="logof.png" alt="" />
+				</a>
+		</nav>
+	</header>
+
+<a class="navbar-brand">
+</a>
+<div class="container">
+  <div class="row" id="topmargin">
+    <div class="col-md-4">
+      <div class="effect-2">
+        <div class="effect-img">
+          <img src="1.jpg" alt="Image">
+        </div>
+        <div class="effect-text">	  
+        </div>
+      </div>
+	  <h2>B.Tech Civil Engineering</h2>
+	  <p>Civil Engineering is the key to many of the issues affecting our lives today. Civil engineers solve problems, design, build....</p>
+	<br>  <button class="btn1"><a href="civildept.html">Read More</a></button><br><br><br><br>
+    </div>
+    <div class="col-md-4">
+      <div class="effect-2">
+        <div class="effect-img">
+          <img src="cse2.jpg" alt="Image">
+        </div>
+      </div>
+	   <h2>B.Tech Computer Science & Engineering</h2>
+	    <p>Computer science and engineering has revolutionized a world that was there only a moment ago, continues to have...</p>
+             <button class="btn1"><a href="csedept.html">Read More</a></button><br><br><br><br>
+    </div>
+	<div class="col-md-4">
+      <div class="effect-2">
+        <div class="effect-img">
+          <img src="ece2.jpg" alt="Image">
+        </div>
+      </div>
+	  <h2>B.Tech Electronics & Communication Engineering</h2>
+	  <p>Electronics and Communication Engineering's scope is very vast, keeping in view the fact that modern technology....</p>
+             <button class="btn1"><a href="ecedept.html">Read More</a></button>
+			 <button class="btn3"><a href="#"></a></button>
+    </div>
+	</div>
+	<div class="row" id="topmargin">
+	
+	    <div class="col-md-4">
+      <div class="effect-2">
+        <div class="effect-img">
+          <img src="me1.jpg" alt="Image">
+        </div>
+      </div>
+	  <h2>B.Tech Mechanical Engineering</h2>
+	  <p>Mechanical engineers are hugely demanded in both India and abroad. The growth is ample in this industry, in fact....</p>
+      <button class="btn1"><a href="medept.html">Read More</a></button><br><br><br><br>
+    </div>
+    <div class="col-md-4">
+      <div class="effect-2">
+        <div class="effect-img">
+          <img src="cse1.jpg" alt="Image">
+        </div>
+      </div>
+	   <h2>Diploma Courses</h2>
+	   <p>Diploma courses in the field of Computer Science Engineering, Civil Engineering, Mechanical Engineering has been steadily increasing scope. There are.... </p>
+           <button class="btn1"><a href="diploma.html">Read More</a></button><br><br><br><br>
+    </div>
+	
+	<div class="col-md-4">
+      <div class="effect-2">
+        <div class="effect-img">
+          <img src="auto3.jpg" alt="Image">
+        </div>
+      </div>
+	         <h2>B.Voc Automobile Servicing</h2>
+			           <p>Vocational or skill based education is becoming more and more significant with the passing time. Even in India it has....</p>
+           <br> <button class="btn1"><a href="automobileser.html">Read More</a></button>
+			 <button class="btn3"><a href="#"></a></button>
+    </div>
+	</div>
+	<div class="row" id="topmargin">
+	
+	
+	<div class="col-md-4">
+      <div class="effect-2">
+        <div class="effect-img">
+          <img src="data3.jpg" alt="Image">
+        </div>
+      </div>
+	     <h2>B.Voc Software Development</h2>
+		 <p>B.Voc Software Development deals more with application based studies rather than focusing on only theoretical knowledge. The career opportunities in...</p>
+         <button class="btn1"><a href="softdev.html">Read More</a></button>
+		 <button class="btn3"><a href="#"></a></button>
+    </div>
+	
+	<div class="col-md-4">
+      <div class="effect-2">
+        <div class="effect-img">
+          <img src="bsc2.jpeg" alt="Image">
+        </div>
+      </div>
+	    <h2>B.Sc Medical Lab Sciences</h2>
+		 <p>B.Sc (Medical Lab Sciences) is concerned with with the treatment, diagnosis and prevention of disease through the use of..</p>
+           <button class="btn1"><a href="bsc.html">Read More</a></button>
+    </div>
+	</div>
+	
+</div>
+    <a style="background-color:#B91372;" href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+	<script src="js/tippy.all.min.js"></script>
+    <script src="js/custom.js"></script>
+	<script>
+		tippy('.btn-a')
+	</script>
+</body>
+</html>
